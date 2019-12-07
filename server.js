@@ -1,7 +1,9 @@
 // External dependencies
+require('dotenv').config();
 const express = require('express');
 
 const server = express();
 server.use(express.json());
 
-server.listen(8081, () => console.log(`Server running at ${8081}.`));
+const PORT = process.env.PORT;
+server.listen(PORT, () => console.log(`Server running at ${PORT}.`));
